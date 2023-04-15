@@ -2,12 +2,12 @@ from setuptools import setup
 
 
 setup(name='gpt_address_api',
-version='0.2.2',
-description="""Mapping Addresses to Dynamic IPs, Simplified""",
+version='0.1.0',
+description="""Decentralized GPT API for everyone !""",
 long_description_content_type="text/markdown",
 include_package_data=True,
 long_description="".join(open("README.md", encoding="utf-8").readlines()),
-url='https://github.com/Naruno/Address-Name-System',
+url='https://github.com/Naruno/GPT-Address-API',
 author="Naruno Developers",
 author_email='onur.atakan.ulusoy@naruno.org',
 license='MIT',
