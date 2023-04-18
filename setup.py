@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='gpt_address_api',
-version='0.1.1',
+version='0.1.2',
 description="""Decentralized GPT API for everyone !""",
 long_description_content_type="text/markdown",
 include_package_data=True,
