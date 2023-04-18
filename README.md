@@ -44,7 +44,7 @@ my_gptaapi_server.run()
 
 also you can use in command line:
 ```console	
-gptaapi --password MyNarunoPass --encrypt_key "mystrongencrypt_key" --trusted_users ["client_address"] --api_key sk-*** run
+gptaapi --password MyNarunoPass --encrypt_key "mystrongencrypt_key" --trusted_users ["client_address"] --api_key my_open_ai_api_key run
 ```
 
 ### Client
