@@ -32,8 +32,8 @@ class gptaapi:
 
     
     def ask(self, user, message, encrypt_key):
-
-        self.integration.send("message", message, user)
+        
+        self.integration.send("message", encrypt(message, encrypt_key), user)
         start_time = time.time()
         while True:
             if time.time() - start_time > self.timeout:
@@ -71,7 +71,7 @@ class gptaapi:
                     if each["fromUser"] in self.trusted_users:
                         response = openai.ChatCompletion.create(
                             model="gpt-3.5-turbo",
-                            messages=[{"role": "user", "content": each["data"]["app_data"] }]
+                            messages=[{"role": "user", "content": decrypt(each["data"]["app_data"], self.encrypt_key) }]
                             )["choices"][0]["message"]["content"]
                         response = encrypt(response, self.encrypt_key)
                         self.integration.send("reply", response, each["fromUser"])
